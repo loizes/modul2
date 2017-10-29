@@ -1,5 +1,5 @@
-document.ready(function(){
-  $(".new-question").click(function(){
-  $(".fffix").clone().appendTo(".surveyblock");
- });
+document.querySelector(".new-question").addEventListener('click', () => {
+  var ddd = document.querySelector(".surveyblock").cloneNode(true);
+ document.body.insertBefore(ddd, document.querySelector(".new-question"));
+
 })
