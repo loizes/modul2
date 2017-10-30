@@ -1,7 +1,10 @@
-document.getElementById("btnsurvey").onclick = function clickthree() {
-var parent = document.getElementById('surveyblock');
-var elem = parent.getElementById('threefields');
-var clone = elem.cloneNode(true);
-parent.appendchild(clone);
-console.log(clone);
-};
+$().ready(function(){
+    $(".selection").change(function(){
+        if($(this).val()==2){
+            $(".cdsniga").hide(150);
+        }
+        else{
+            $(".cdsniga").show(150);
+        }
+    })
+})

@@ -6,7 +6,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/semantic.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/ittech.css" />
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-    <!-- <script src="assets/js/jsjs.js"></script> -->
+
+
 
 </head>
 <body>
@@ -27,24 +28,24 @@
                 <div class="three fields">
                     <div class="field">
                         <label>Identification</label>
-                        <input type="text" placeholder="Identification">
+                        <input type="text" required placeholder="Identification">
                     </div>
                     <div class="field">
                         <label>Password</label>
-                        <input type="text" placeholder="Password">
+                        <input type="text" required placeholder="Password">
                     </div>
                     <div class="field">
                         <label>Survey Title</label>
-                        <input tye="text" placeholder="Survey Title">
+                        <input tye="text" required placeholder="Survey Title">
                     </div>
                 </div>
                 <div class="field">
                     <label>Survey Description</label>
                     <textarea placeholder="Survey Description" rows="2"></textarea>
                 </div>
-                <div class="field">
+                <div class="field field-selection">
                     <label>Type of Survey</label>
-                    <select>
+                    <select class="selection">
                         <option value="0" >Select</option>
                         <option value="1" >Public Survey</option>
                         <option value="2" >Restrict Survey</option>
@@ -116,16 +117,9 @@
                     </div>
                 </div>
                 
-                <h4 class="ui dividing header">Questions <span><button class="ui button new-question"   id="btnsurvey"><i class="add square icon"></i> New question</button></span></h4>
-                <script type="text/javascript">
-                $().ready(function(){
-  $(".new-question").click(function(){
-  $(".fffix").clone().appendTo(".surveyblock");
- });
-})
-                </script>
+                <h4 class="ui dividing header">Questions <span><div class="ui button new-question"   id="btnsurvey"><i class="add square icon"></i> New question</div></span></h4>
                 <div class="surveyblock">
-                <div class="three fields fffix" id="threefields">
+                <div class="three fields fffix parent" id="threefields">
                     <div class="field" id="">
                         <label>Question</label>
                         <input type="text" placeholder="Question">
@@ -143,8 +137,8 @@
                         <label>Options List</label>
                         <input type="text" placeholder="Options List">
                     </div>
-                    <div class="field" id="">
-                        <button class="ui red button remove-question"><i class="remove icon"></i> Remove</button>
+                    <div class="field remover" id="">
+                        <div class="ui red button remove-question"><i class="remove icon"></i> Remove</div>
                     </div>
                 </div>
                 </div>
@@ -167,7 +161,7 @@
             </div>
         </div>
     </div>
-     <!-- /Footer -->
-  
+   <script src="assets/js/jsjs.js"></script>
+   <script src="assets/js/createfields.js"></script>
 </body>
 </html>

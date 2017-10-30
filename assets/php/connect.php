@@ -3,4 +3,5 @@
  mysql_select_db("survey",$db);
  $sql = mysql_query("SELECT * FROM employees",$db);
  mysql_close($db);
+ 
  ?>
