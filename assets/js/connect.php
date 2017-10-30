@@ -3,8 +3,7 @@
   or die('Could not connext to mysql server');
  mysql_select_db("survey",$db) 
  or die('Could not select db');
- $sql = mysql_query("SELECT * FROM employees",$db);
+ $sql = mysql_query("SELECT name FROM employees",$db);
  mysql_close($db);
- echo "good";
  
  ?>
